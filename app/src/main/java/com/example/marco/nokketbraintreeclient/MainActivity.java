@@ -85,7 +85,6 @@ public class MainActivity extends AppCompatActivity implements PaymentMethodNonc
 
         CardBuilder cardBuilder = new CardBuilder()
                 .cardNumber("4111111111111111")
-                //.cardNumber("4837419008371760")
                 .expirationMonth("10")
                 .expirationYear("2019");
 
@@ -147,6 +146,6 @@ public class MainActivity extends AppCompatActivity implements PaymentMethodNonc
 
     @Override
     public void onError(Exception error) {
-        Toast.makeText(MainActivity.this, "Payment Error", Toast.LENGTH_LONG).show();
+        Toast.makeText(MainActivity.this, "Payment Error: " + error.getMessage(), Toast.LENGTH_LONG).show();
     }
 }
